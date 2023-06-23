@@ -20,6 +20,7 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-t>"] = { ":ToggleTerm", desc = "Terminal Toggle" },  -- change description but the same command
   },
   t = {
     -- setting a mapping to false will disable it
