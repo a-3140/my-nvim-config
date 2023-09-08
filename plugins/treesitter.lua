@@ -13,6 +13,7 @@ return {
       "tsx",
       "vue",
       "markdown",
+      "terraform",
     },
     autotag = { enable = true },
     highlight = { enable = true },
