@@ -14,7 +14,6 @@ return {
         "dockerls",
         "marksman",
         "volar",
-        "terraformls",
       },
     },
   },
@@ -23,22 +22,14 @@ return {
     "jay-babu/mason-null-ls.nvim",
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
-      ensure_installed = { "terraform_fmt", "stylua", "terraform_validate" },
+      ensure_installed = { "stylua" },
     },
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
-      ensure_installed = { "node2" },
+      ensure_installed = { "dap-vscode-js" },
     },
   },
 }
--- require"-lspconfig".volar.setup{
---   init_options = {
---     typescript = {
---       tsdk = '/Users/a3140/.nvm/versions/node/v18.16.0/lib/node_modules/typescript/lib'
---     }
---   },
--- },
---
