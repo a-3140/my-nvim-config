@@ -17,4 +17,5 @@ return {
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.python" },
 }

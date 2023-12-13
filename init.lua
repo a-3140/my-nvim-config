@@ -19,7 +19,7 @@ return {
 
   -- Set colorscheme to use
   termguicolors = true,
-  colorscheme = "github_dark_high_contrast",
+  colorscheme = "github_dark_dimmed",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -37,7 +37,7 @@ return {
           -- "go",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
-          "python",
+          -- "python",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
