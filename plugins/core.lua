@@ -32,8 +32,8 @@ return {
   --     local luasnip = require "luasnip"
   --     luasnip.filetype_extend("javascript", { "javascriptreact" })
   --   end,
-  -- },
   -- {
+  -- },
   --   "windwp/nvim-autopairs",
   --   config = function(plugin, opts)
   --     require "plugins.configs.nvim-autopairs"(plugin, opts) -- include the default astronvim config that calls the setup call

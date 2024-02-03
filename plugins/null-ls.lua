@@ -17,9 +17,7 @@ return {
       require "typescript.extensions.null-ls.code-actions",
       null_ls.builtins.code_actions.eslint_d,
       -- null_ls.builtins.diagnostics.eslint_d,
-      null_ls.builtins.diagnostics.eslint.with {
-        prefer_local = "node_modules/.bin",
-      },
+      -- null_ls.builtins.diagnostics.eslint_d,
     }
 
     config.opts = {
@@ -48,7 +46,7 @@ return {
         -- end,
         -- For eslint_d:
         eslint_d = function()
-          require("null-ls").register(require("null-ls").builtins.diagnostics.eslint.with {
+          require("null-ls").register(require("null-ls").builtins.diagnostics.eslint_d.with {
             condition = function(utils)
               return utils.root_has_file "package.json"
                 or utils.root_has_file ".eslintrc.json"
