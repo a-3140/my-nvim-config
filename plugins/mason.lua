@@ -6,14 +6,13 @@ return {
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       ensure_installed = {
-        "tsserver",
+        "volar",
         "tailwindcss",
         "pyright",
-        "graphql",
         "lua_ls",
         "dockerls",
-        "marksman",
-        "volar",
+        "tsserver",
+        "jsonls",
       },
     },
   },
@@ -29,7 +28,28 @@ return {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
-      ensure_installed = { "dap-vscode-js" },
+      ensure_installed = { "js", "node2" },
     },
   },
 }
+-- require"-lspconfig".volar.setup{
+--   init_options = {
+--     typescript = {
+--       tsdk = '/Users/a3140/.nvm/versions/node/v18.16.0/lib/node_modules/typescript/lib'
+--     }
+--   },
+-- },
+--
+---- require('lspconfig').setup_handlers({
+--   function(server_name)
+--     local server_config = {}
+--     if require("neoconf").get(server_name .. ".disable") then
+--       return
+--     end
+--     if server_name == "volar" then
+--         server_config.filetypes = { 'vue', 'typescript', 'javascript' }
+--     end
+-- local lspconfig = require('lspconfig')
+--     lspconfig[server_name].setup(server_config)
+--   end,
+-- })

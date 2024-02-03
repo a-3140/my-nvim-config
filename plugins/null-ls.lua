@@ -15,9 +15,11 @@ return {
       null_ls.builtins.formatting.black,
       null_ls.builtins.formatting.prettier, -- prettier, eslint, eslint_d, or prettierd
       require "typescript.extensions.null-ls.code-actions",
-      -- null_ls.builtins.diagnostics.eslint.with {
-      --   prefer_local = "node_modules/.bin",
-      -- },
+      null_ls.builtins.code_actions.eslint_d,
+      -- null_ls.builtins.diagnostics.eslint_d,
+      null_ls.builtins.diagnostics.eslint.with {
+        prefer_local = "node_modules/.bin",
+      },
     }
 
     config.opts = {
@@ -34,23 +36,24 @@ return {
           })
         end,
         -- for prettierd
-        prettierd = function()
-          require("null-ls").register(require("null-ls").builtins.formatting.prettierd.with {
-            condition = function(utils)
-              return utils.root_has_file "package.json"
-                or utils.root_has_file ".prettierrc"
-                or utils.root_has_file ".prettierrc.json"
-                or utils.root_has_file ".prettierrc.js"
-            end,
-          })
-        end,
+        -- prettierd = function()
+        --   require("null-ls").register(require("null-ls").builtins.formatting.prettierd.with {
+        --     condition = function(utils)
+        --       return utils.root_has_file "package.json"
+        --         or utils.root_has_file ".prettierrc"
+        --         or utils.root_has_file ".prettierrc.json"
+        --         or utils.root_has_file ".prettierrc.js"
+        --     end,
+        --   })
+        -- end,
         -- For eslint_d:
         eslint_d = function()
-          require("null-ls").register(require("null-ls").builtins.diagnostics.eslint_d.with {
+          require("null-ls").register(require("null-ls").builtins.diagnostics.eslint.with {
             condition = function(utils)
               return utils.root_has_file "package.json"
                 or utils.root_has_file ".eslintrc.json"
                 or utils.root_has_file ".eslintrc.js"
+                or utils.root_has_file ".eslintrc.cjs"
             end,
           })
         end,

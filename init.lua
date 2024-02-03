@@ -19,7 +19,7 @@ return {
 
   -- Set colorscheme to use
   termguicolors = true,
-  colorscheme = "github_dark_dimmed",
+  -- colorscheme = "rose-pine",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -41,7 +41,7 @@ return {
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
-        "volar",
+        -- "volar",
       },
       timeout_ms = 1000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
@@ -69,7 +69,9 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
-    return {}
+    -- return {
+    -- }
+
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {

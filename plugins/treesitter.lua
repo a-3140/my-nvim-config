@@ -11,7 +11,7 @@ return {
       "typescript",
       "python",
       "tsx",
-      "vue",
+      -- "vue",
       "markdown",
       "terraform",
     },
